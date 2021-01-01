@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Future Software/Science Salaries + Donate/Bequest for Science and Climate</title>
+    <script src="vue.js"></script>
+    <script src="http-vue-loader.js"></script>
+  </head>
+  <body>
+    <div id="my-app">
+      <donate></donate>
+    </div>
+    <script>
+      new Vue({
+        el: '#my-app',
+        components: {
+          // 'donate': Vue.defineAsyncComponent(() => loadModule('./donate.vue'))
+          'donate': httpVueLoader('./donate.vue')
+        },
+      });
+    </script>
+  </body>
+</html>
